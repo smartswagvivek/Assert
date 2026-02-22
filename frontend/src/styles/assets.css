@@ -1,0 +1,363 @@
+.assets-page {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.assets-header {
+  padding: 1.1rem 0 0.65rem;
+}
+
+.header-content {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-subtitle {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.user-info {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.assets-main {
+  margin-top: 1rem;
+}
+
+.actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stat-tile {
+  padding: 0.8rem;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.stat-value {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.asset-count {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.search-input {
+  width: min(560px, 100%);
+}
+
+.form-section {
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1rem;
+}
+
+.form-section h2 {
+  margin-bottom: 0.8rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.assets-list {
+  margin-top: 1rem;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.95rem;
+}
+
+.asset-card {
+  padding: 0.9rem;
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--surface-solid) 94%, transparent),
+    var(--surface-solid)
+  );
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.card-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.category-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 0.77rem;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--primary) 12%, var(--surface-solid));
+  color: var(--primary);
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.badge-success {
+  color: #03543f;
+  background: #d1fae5;
+}
+
+.badge-info {
+  color: #0c4a6e;
+  background: #dbeafe;
+}
+
+.badge-warning {
+  color: #7c2d12;
+  background: #ffedd5;
+}
+
+.badge-danger {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+:root[data-theme='dark'] .badge-success {
+  color: #d1fae5;
+  background: color-mix(in srgb, #10b981 30%, transparent);
+}
+
+:root[data-theme='dark'] .badge-info {
+  color: #dbeafe;
+  background: color-mix(in srgb, #3b82f6 26%, transparent);
+}
+
+:root[data-theme='dark'] .badge-warning {
+  color: #fde68a;
+  background: color-mix(in srgb, #f59e0b 24%, transparent);
+}
+
+:root[data-theme='dark'] .badge-danger {
+  color: #fecaca;
+  background: color-mix(in srgb, #ef4444 24%, transparent);
+}
+
+.card-body {
+  margin-bottom: 0.75rem;
+}
+
+.asset-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item .label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.info-item .value {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  word-break: break-word;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-actions .btn {
+  flex: 1;
+}
+
+.empty-state {
+  border: 1px dashed color-mix(in srgb, var(--primary) 35%, var(--border));
+  border-radius: 14px;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: color-mix(in srgb, var(--surface-solid) 96%, transparent);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  z-index: 70;
+  padding: 1rem;
+}
+
+.modal-card {
+  width: min(460px, 100%);
+  padding: 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-depth);
+  animation: modalIn 180ms ease;
+}
+
+.modal-card h3 {
+  margin-bottom: 0.45rem;
+}
+
+.modal-card p {
+  margin-bottom: 0.9rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 760px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .actions-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .assets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .asset-info {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+}
